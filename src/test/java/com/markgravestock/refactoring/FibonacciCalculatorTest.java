@@ -1,14 +1,27 @@
 package com.markgravestock.refactoring;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
 public class FibonacciCalculatorTest {
-	@Test
-	public void canCalculateFirstFibonacciNumber() throws Exception {
-		Calculator sut = new Calculator();
-		assertThat(sut.calculateFibonacci(1), is(equalTo(1)));
-	}
+  @Test
+  public void canCalculateZerothFibonacciNumber() throws Exception {
+    FibonacciCalculator sut = new FibonacciCalculator();
+    assertThat(sut.calculateFibonacci(0), is(equalTo(0)));
+  }
+
+  @Test
+  public void canCalculateFirstFibonacciNumber() throws Exception {
+    FibonacciCalculator sut = new FibonacciCalculator();
+    assertThat(sut.calculateFibonacci(1), is(equalTo(1)));
+  }
+
+  @Test
+  public void canCalculateFirstFibonacciNumber1() throws Exception {
+    FibonacciCalculator sut = new FibonacciCalculator();
+    assertThat(sut.calculateFibonacci(1), is(equalTo(1)));
+  }
 }

@@ -1,9 +1,14 @@
 package com.markgravestock.refactoring;
 
-public class Calculator {
+public class FibonacciCalculator {
 
 	public int calculateFibonacci(int ordinal) {
-		return 0;
+		if (ordinal == 0)
+		{
+			return 0;
+		}
+		
+		return 1;
 	}
 
 }

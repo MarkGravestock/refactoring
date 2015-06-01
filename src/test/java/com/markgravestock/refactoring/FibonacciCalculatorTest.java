@@ -8,20 +8,17 @@ import org.junit.Test;
 
 public class FibonacciCalculatorTest {
   @Test
-  public void canCalculateZerothFibonacciNumber() throws Exception {
-    FibonacciCalculator sut = new FibonacciCalculator();
-    assertThat(sut.calculateFibonacci(0), is(equalTo(0)));
+  public void canCalculateZerothFibonacciNumber() {
+    assertThat(calculateFibonacci(0), is(equalTo(0)));
+  }
+
+  private int calculateFibonacci(final int ordinal) {
+    final FibonacciCalculator sut = new FibonacciCalculator();
+    return sut.calculateFibonacci(ordinal);
   }
 
   @Test
-  public void canCalculateFirstFibonacciNumber() throws Exception {
-    FibonacciCalculator sut = new FibonacciCalculator();
-    assertThat(sut.calculateFibonacci(1), is(equalTo(1)));
-  }
-
-  @Test
-  public void canCalculateFirstFibonacciNumber1() throws Exception {
-    FibonacciCalculator sut = new FibonacciCalculator();
-    assertThat(sut.calculateFibonacci(1), is(equalTo(1)));
+  public void canCalculateFirstFibonacciNumber() {
+    assertThat(calculateFibonacci(1), is(equalTo(1)));
   }
 }

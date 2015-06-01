@@ -2,13 +2,13 @@ package com.markgravestock.refactoring;
 
 public class FibonacciCalculator {
 
-	public int calculateFibonacci(int ordinal) {
-		if (ordinal == 0)
-		{
-			return 0;
-		}
-		
-		return 1;
-	}
+  public int calculateFibonacci(final int ordinal) {
+    int fibonacci = 0;
+    
+    if (ordinal == 1) {
+      fibonacci = 1;
+    }
 
+    return fibonacci;
+  }
 }
